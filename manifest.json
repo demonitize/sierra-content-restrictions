@@ -2,6 +2,7 @@
   "name": "Sierra Content Restrictions",
   "description": "Chrome Extension to block websites for the Sierra Program",
   "version": "1.0",
+  "author": "Demonitized",
   "manifest_version": 3,
   "background": {
     "service_worker": "background.js"
