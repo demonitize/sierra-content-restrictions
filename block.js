@@ -1,3 +1,6 @@
+const urlSearchParams = new URLSearchParams(window.location.search);
+const params = Object.fromEntries(urlSearchParams.entries());
+
 function getCookie(cname) {
   let name = cname + "=";
   let decodedCookie = decodeURIComponent(document.cookie);
@@ -21,5 +24,31 @@ function setCookie(cname, cvalue, exdays) {
   document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
 }
 
+function getQueryVariable(variable) {
+  try {
+    var query = window.location.search.substring(1);
+    var vars = query.split("&");
+    for (var i = 0; i < vars.length; i++) {
+      var pair = vars[i].split("=");
+      if (pair[0] == variable) {
+        return pair[1];
+      }
+    }
+    return false;
+  } catch (err) {
+    console.warn(err);
+  }
+}
+
+function editBlockContent() {
+  document.getElementById("blockData").innerHTML = `The website <b>${getQueryVariable('uri')}</b> 
+  has been blocked due to it being in the <b>${getQueryVariable('cat')}</b> 
+  category for group <b>${getQueryVariable('grp')}</b>.`;
+}
+
 let pageAmt = getCookie("blockedPages");
 setCookie("blockedPages", pageAmt++, 1461);
+editBlockContent();
+
+
+
