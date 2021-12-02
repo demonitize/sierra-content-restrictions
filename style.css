@@ -1,0 +1,16 @@
+body {
+ background-color: #23272A;
+ color: #FFFFFF;
+}
+
+h2, h3, h4, h5, h6, p {
+ color: #FFFFFF;
+}
+
+h1 {
+ color: #ED4245; 
+}
+
+aligned {
+ text-align: center;
+}
