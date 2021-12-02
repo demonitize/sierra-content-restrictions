@@ -13,7 +13,7 @@ chrome.storage.managed.get('RestrictionsEnabled', (data) => {
 chrome.storage.managed.get('BlockedPages', (data) => {
   blockedPages = data.BlockedPages;
   }
-});
+);
 
 chrome.storage.managed.get('RedirectEnabled', (data) => {
     if (data.RedirectEnabled) {
