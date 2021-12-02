@@ -1,15 +1,18 @@
 body {
+ font-family: sans-serif;
  background-color: #23272A;
  color: #FFFFFF;
 }
 
 h2, h3, h4, h5, h6, p {
  color: #FFFFFF;
+ font-family: sans-serif;
 }
 
 h1 {
+ font-family: sans-serif;
  color: #ED4245;
- font-size: 8em;
+ font-size: 6em;
 }
 
 .aligned {
