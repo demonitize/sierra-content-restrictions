@@ -41,14 +41,12 @@ function getQueryVariable(variable) {
 }
 
 function editBlockContent() {
-  document.getElementById("blockData").innerHTML = `The website <b>${getQueryVariable('uri')}</b> 
-  has been blocked due to it being in the <b>${getQueryVariable('cat')}</b> 
-  category for group <b>${getQueryVariable('grp')}</b>.`;
+	let category = decodeURIComponent(getQueryVariable('cat'));
+  document.getElementById("blockData").innerHTML = `The website <b>${decodeURIComponent(getQueryVariable('uri'))}</b> 
+  has been blocked due to it being in the <b>${decodeURIComponent(getQueryVariable('cat'))}</b> 
+  category for group <b>${decodeURIComponent(getQueryVariable('grp'))}</b>.`;
 }
 
 let pageAmt = getCookie("blockedPages");
 setCookie("blockedPages", pageAmt++, 1461);
 editBlockContent();
-
-
-
