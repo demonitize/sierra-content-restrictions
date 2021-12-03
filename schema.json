@@ -1,31 +1,38 @@
-
 {
-  "type": "object",
+	"type": "object",
 
-    "RestrictionsEnabled": {
-      "title": "Enables the extension to restrict content",
-      "description": "If set to true then content will be restricted",
-      "type": "boolean"
-    },
-  
-    "BlockedPages": {
-      "title": "Defined URLs to restrict",
-      "description":"An Array of websites to restrict",
-      "type":"array",
-      "sites": {
-        "type": "string"
-      }
-    },
-  
-  "RedirectEnabled":{
-    "title":"If the redirect module is enabled",
-    "description":"If set to true, then blocked pages will be redirected",
-    "type":"boolean"
-  },
-  
-  "RedirectTo":{
-    "title":"The URL to redirect to",
-    "description":"The page you want blocked traffic redirected to. If not needed, set to \"null\"",
-    "type":"string"
-  }
+	"RestrictionsEnabled": {
+		"title": "Enables the extension to restrict content",
+		"description": "If set to true then content will be restricted",
+		"type": "boolean"
+	},
+
+	"BlockedPages": {
+		"title": "Defined URLs to restrict",
+		"description": "An Array of websites to restrict",
+		"type": "array",
+		"sites": {
+			"type": "string"
+		}
+	},
+
+	"RedirectEnabled": {
+		"title": "If the redirect module is enabled",
+		"description": "If set to true, then blocked pages will be redirected",
+		"type": "boolean"
+	},
+
+	"RedirectOptions": {
+		"type": "object",
+		"additionalProperties": {
+			"type": "object",
+			"properties": {
+				"RedirectTo": {
+					"title": "The URL to redirect to",
+					"description": "The page you want blocked traffic redirected to. If not needed, set to \"null\"",
+					"type": "string"
+				}
+			}
+		}
+	}
 }
