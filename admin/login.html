@@ -1,0 +1,20 @@
+<html>
+  <head>
+    <title>Admin Panel</title>
+    <meta name="description" content="Admin Panel for the Sierra Program Web Filter" />
+    <script src="/src/admin/login.js" defer></script>
+    <link rel="stylesheet" href="/src/admin/style.css" />
+  </head>
+  <body>
+    <h1>Login</h1>
+    <form action="/api/login/auth" method="POST">
+      <input type="text" placeholder="Username" id="uname" name="uname" required>
+      <br>
+      <br>
+      <input type="password" placeholder="Password" id="pword" name="pword" required>
+      <br>
+      <br>
+      <input type="submit" value="Login">
+    </form>
+  </body>
+</html>
