@@ -42,7 +42,7 @@ function getQueryVariable(variable) {
 
 function editBlockContent() {
 	let category = decodeURIComponent(getQueryVariable('cat'));
-  document.getElementById("blockData").innerHTML = `The website <b>${decodeURIComponent(getQueryVariable('uri'))}</b> 
+  document.getElementById("blockData").innerText = `The website <b>${decodeURIComponent(getQueryVariable('uri'))}</b> 
   has been blocked due to it being in the <b>${decodeURIComponent(getQueryVariable('cat'))}</b> 
   category for group <b>${decodeURIComponent(getQueryVariable('grp'))}</b>.`;
 }
