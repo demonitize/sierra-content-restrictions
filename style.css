@@ -34,6 +34,7 @@ h1 {
     background-image: linear-gradient(45deg, #800080 0%, 
     #E90207 46%, 
     #ff8c00 100%);
+    position: absolute;
 }
 .glass {
     position: absolute;
